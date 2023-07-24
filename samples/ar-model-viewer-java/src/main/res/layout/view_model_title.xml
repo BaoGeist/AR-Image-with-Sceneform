@@ -1,10 +1,41 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="500px"
+android:layout_height="500px"
+android:background="@drawable/rounded_bg"
+android:orientation="vertical"
+android:padding="16dp">
+
+<TextView
+    android:id="@+id/busNumberTextView"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:background="@drawable/rounded_bg"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="6dp"
-    android:text="Tiger"
-    android:textAlignment="center" />
+    android:text="Next Bus"
+    android:textSize="24sp"
+    app:autoSizeTextType="uniform"
+    android:textColor="#000000" />
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"
+    />
+
+<TextView
+    android:id="@+id/busTimeTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Your next bus ______ will arrive at ____."
+    android:textSize="18sp"
+    app:autoSizeTextType="uniform"
+    android:textColor="#000000"
+    android:paddingTop="12dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bus"
+        android:layout_gravity="end"/>
+
+</LinearLayout>
